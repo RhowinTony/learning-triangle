@@ -8,5 +8,18 @@
 # 1 5 10 10 5 1
 
 # Here the input is 6.
+import re
 
-print("hello world")
+
+try:
+    rows = input("Enter the number of rows ")
+    req_rows = int(rows)
+    if req_rows < 0:
+        raise ValueError
+except ValueError:
+    print("Error occured - Enter a positive integer ")
+else:
+    for i in range(req_rows):
+        for j in range(i+1):
+            print("*",end ="")
+        print()
