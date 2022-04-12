@@ -8,8 +8,6 @@
 # 1 5 10 10 5 1
 
 # Here the input is 6.
-import re
-
 
 try:
     rows = input("Enter the number of rows ")
