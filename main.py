@@ -9,15 +9,18 @@
 
 # Here the input is 6.
 
-try:
-    rows = input("Enter the number of rows ")
-    req_rows = int(rows)
-    if req_rows < 0:
-        raise ValueError
-except ValueError:
-    print("Error occured - Enter a positive integer ")
-else:
-    for i in range(req_rows):
-        for j in range(i+1):
-            print("*",end ="")
-        print()
+def main():
+    try:
+        rows = input("Enter the number of rows ")
+        req_rows = int(rows)
+        if req_rows < 0:
+            raise ValueError
+    except ValueError:
+        print("Error occured - Enter a positive integer ")
+    else:
+        for i in range(req_rows):
+            for j in range(i+1):
+                print("*",end ="")
+            print()
+
+main()
