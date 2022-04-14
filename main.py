@@ -9,18 +9,12 @@
 
 # Here the input is 6.
 
-def main():
-    try:
-        rows = input("Enter the number of rows ")
-        req_rows = int(rows)
-        if req_rows < 0:
-            raise ValueError
-    except ValueError:
-        print("Error occured - Enter a positive integer ")
-    else:
-        for i in range(req_rows):
-            for j in range(i+1):
-                print("*",end ="")
-            print()
+from patterngenerator import PatternPrinter
 
-main()
+def main() -> None:
+    input_val = input("Please enter the number of rows for the triangle: ")
+    pattern_generator = PatternPrinter(input_val)
+    pattern_generator.generate_pattern()
+
+if __name__ == "__main__":
+    main()
