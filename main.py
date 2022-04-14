@@ -9,6 +9,8 @@
 
 # Here the input is 6.
 
+from math import factorial
+
 def main():
     try:
         rows = input("Enter the number of rows ")
@@ -20,7 +22,6 @@ def main():
     else:
         for i in range(req_rows):
             for j in range(i+1):
-                print("*",end ="")
+                print(factorial(i)//(factorial(j)*factorial(i-j)), end=" ")
             print()
-
 main()
