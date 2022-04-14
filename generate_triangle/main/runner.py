@@ -9,7 +9,7 @@
 
 # Here the input is 6.
 
-from patterngenerator import PatternPrinter
+from generate_triangle.generator import PatternPrinter
 
 def main() -> None:
     input_val = input("Please enter the number of rows for the triangle: ")
