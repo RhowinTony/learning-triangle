@@ -1,6 +1,7 @@
 import sys
 
 class PatternPrinter:
+    Message_string = "hai"
     def __init__(self, int_val:str) -> None:
         try:
             self.number_of_rows = PatternPrinter._is_positive_integer(int_val)
@@ -9,6 +10,12 @@ class PatternPrinter:
             print(f"Input is not valid, Please re-run with valid input. - {e}")
             sys.exit(1)
     
+
+    @classmethod
+    def print_message_string(cls):
+        print(cls.Message_string)
+
+
     @staticmethod
     def _is_positive_integer(input_val:str) -> int:
         check_val = int(input_val)
@@ -17,7 +24,9 @@ class PatternPrinter:
         else:
             return check_val
     
-    def generate_pattern(self):
+    def generate_pattern(self) -> None:
+        print(self.Message_string, "++++")
+        PatternPrinter.print_message_string()
         if self.number_of_rows == 1:
             self.final_pattern_list = self.generate_pattern_for_one_row()
         elif self.number_of_rows == 2:
