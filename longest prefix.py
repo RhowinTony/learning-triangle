@@ -22,4 +22,3 @@ def get_user_data(self):
 
 input_data = int(input("Enter the number of strings "))
 user_data = get_user_data(input_data)
-print(user_data)
