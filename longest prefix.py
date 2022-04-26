@@ -10,19 +10,16 @@
 # Output: "fl"
 
 
-"""
-      if len(strs) == 0:
-         return ""
-      current = strs[0]
-      for i in range(1,len(strs)):
-         temp = ""
-         if len(current) == 0:
-            break
-         for j in range(len(strs[i])):
-            if j<len(current) and current[j] == strs[i][j]:
-               temp+=current[j]
-            else:
-               break
-         current = temp
-      return current
-"""
+def get_user_data(self):
+   str_data = []
+   e = 0
+   while e < input_data:
+      val = input("- Enter a word - ")
+      e += 1
+      str_data.append(val)
+   return str_data
+
+
+input_data = int(input("Enter the number of strings "))
+user_data = get_user_data(input_data)
+print(user_data)
