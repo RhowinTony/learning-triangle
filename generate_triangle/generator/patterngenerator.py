@@ -23,7 +23,7 @@ class PatternPrinter:
             raise ValueError("Value is less than 0.")
         else:
             return check_val
-    
+
     def generate_pattern(self) -> None:
         if self.number_of_rows == 1:
             self.final_pattern_list = self.generate_pattern_for_one_row()
